@@ -1,0 +1,5 @@
+package com.tausif.example.enums;
+
+public class Category {
+
+}

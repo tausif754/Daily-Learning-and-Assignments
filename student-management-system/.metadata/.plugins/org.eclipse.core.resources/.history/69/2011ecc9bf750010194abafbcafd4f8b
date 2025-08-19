@@ -1,0 +1,5 @@
+package com.tausif.example.repos;
+
+public class QuestionRepository {
+
+}

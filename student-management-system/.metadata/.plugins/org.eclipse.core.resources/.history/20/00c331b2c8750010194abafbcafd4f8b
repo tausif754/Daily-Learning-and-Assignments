@@ -1,0 +1,7 @@
+package com.tausif.example.enums;
+
+public enum Category {
+	JAVA,
+    MYSQL,
+    SPRING
+}
