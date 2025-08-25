@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>🎶 Music Playlist</h2>
+
+  <!-- Filter Section -->
+  <div class="filter-section">
+    <mat-form-field appearance="outline">
+      <mat-label>Filter by</mat-label>
+      <mat-select [(ngModel)]="filterType">
+        <mat-option value="">All</mat-option>
+        <mat-option value="artist">Artist</mat-option>
+        <mat-option value="album">Album</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field
+      *ngIf="filterType"
+      appearance="outline"
+      class="filter-dropdown"
+    >
+      <mat-label>Select {{ filterType }}</mat-label>
+      <mat-select [(ngModel)]="filterValue">
+        <!-- Artist Options -->
+        <ng-container *ngIf="filterType === 'artist'">
+          <mat-option *ngFor="let a of uniqueArtists" [value]="a">
+            {{ a }}
+          </mat-option>
+        </ng-container>
+
+        <!-- Album Options -->
+        <ng-container *ngIf="filterType === 'album'">
+          <mat-option *ngFor="let al of uniqueAlbums" [value]="al">
+            {{ al }}
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!-- Song Cards -->
+  <div class="grid">
+    <mat-card
+      *ngFor="let song of filteredSongs"
+      class="song-card"
+      [class.top-rated]="song.rating === 5"
+    >
+      <!-- Album Cover -->
+      <img mat-card-image [src]="song.image" alt="{{ song.album }}" />
+      <mat-card-header>
+        <mat-card-title>{{ song.name }}</mat-card-title>
+        <mat-card-subtitle
+          >{{ song.artist }} • {{ song.album }}</mat-card-subtitle
+        >
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>⏱ Duration: {{ song.duration }}</p>
+        <p>
+          ⭐ Rating:
+          <mat-icon *ngFor="let r of [].constructor(song.rating)"
+            >star</mat-icon
+          >
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-icon-button color="primary">
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

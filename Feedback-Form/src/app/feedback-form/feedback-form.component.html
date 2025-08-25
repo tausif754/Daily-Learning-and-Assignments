@@ -1,0 +1,76 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Feedback Form</mat-card-title>
+
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="f['name'].touched && f['name'].invalid">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error
+          *ngIf="f['email'].touched && f['email'].hasError('required')"
+        >
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="f['email'].hasError('email')">
+          Enter a valid email
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Subject -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Subject</mat-label>
+        <input matInput formControlName="subject" maxlength="40" />
+        <mat-hint align="end"
+          >{{ f["subject"].value?.length || 0 }}/40</mat-hint
+        >
+        <mat-error *ngIf="f['subject'].touched && f['subject'].invalid">
+          Subject is required (max 40 chars)
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Comments -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Comments / Issue</mat-label>
+        <textarea
+          matInput
+          formControlName="comments"
+          rows="4"
+          maxlength="350"
+        ></textarea>
+        <mat-hint align="end"
+          >{{ f["comments"].value?.length || 0 }}/350</mat-hint
+        >
+        <mat-error *ngIf="f['comments'].touched && f['comments'].invalid">
+          Comments are required (max 350 chars)
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Submit -->
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="feedbackForm.invalid"
+      >
+        Submit
+      </button>
+    </form>
+
+    <!-- Success message -->
+    <mat-card *ngIf="submitted" class="success-message">
+      <mat-card-content>
+        ✅ Thank you! We will get back to you shortly.
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+</div>

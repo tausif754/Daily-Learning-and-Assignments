@@ -1,0 +1,47 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.filter {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+mat-card {
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+mat-card:hover {
+  transform: scale(1.05);
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+mat-icon {
+  color: lightgray;
+}
+
+mat-icon.filled {
+  color: gold;
+}
+
+.highlight {
+  border: 2px solid gold;
+}
