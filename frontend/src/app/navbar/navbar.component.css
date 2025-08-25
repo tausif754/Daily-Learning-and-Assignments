@@ -1,0 +1,19 @@
+.navbar-brand img {
+  border-radius: 50%;
+}
+.nav-link {
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.navbar .nav-link {
+  color: white !important; /* default link color */
+  font-weight: 500;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffd700 !important; /* gold on hover/active */
+}
