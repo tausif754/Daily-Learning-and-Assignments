@@ -1,0 +1,5 @@
+2025-08-27T00:01:19.864+05:30  INFO 22496 --- [User-App] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-27T00:01:19.878+05:30  INFO 22496 --- [User-App] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-27T00:01:19.882+05:30  INFO 22496 --- [User-App] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-27T00:08:48.996+05:30  WARN 22496 --- [User-App] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-08-27T00:09:01.753+05:30  WARN 22496 --- [User-App] [http-nio-8080-exec-5] c.s.example.controllers.UserController   : i am delteting so ans so user:-{}
