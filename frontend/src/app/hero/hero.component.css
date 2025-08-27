@@ -1,8 +1,0 @@
-.hero-section {
-  background: url("/assets/heroImage.png") no-repeat center center/cover;
-  height: 100vh;
-  padding-top: 100px;
-}
-.hero-section .card {
-  border-radius: 20px;
-}
