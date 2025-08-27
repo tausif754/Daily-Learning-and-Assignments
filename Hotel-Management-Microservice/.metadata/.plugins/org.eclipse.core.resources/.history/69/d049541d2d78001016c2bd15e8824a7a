@@ -1,0 +1,5 @@
+package com.wipro.tausif.bookingservice.controller;
+
+public class BookingController {
+
+}

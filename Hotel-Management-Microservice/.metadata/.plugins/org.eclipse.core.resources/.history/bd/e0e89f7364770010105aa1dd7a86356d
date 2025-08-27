@@ -1,0 +1,42 @@
+package com.wipro.tausif.hotelservice.entity;
+
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+import lombok.*;
+
+@Entity
+@Table(name = "hotels")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Hotel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Hotel name is required")
+    @Column(nullable = false)
+    private String name;
+
+    @NotBlank(message = "City is required")
+    @Column(nullable = false)
+    private String city;
+
+    @NotBlank(message = "Address is required")
+    @Column(nullable = false)
+    private String address;
+
+    
+    @Max(value = 5, message = "Rating cannot exceed 5")
+    private Double rating;
+
+    
+    private Integer totalRooms;
+
+    
+}
+

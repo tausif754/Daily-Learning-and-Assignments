@@ -1,0 +1,5 @@
+package com.wipro.tausif.roomservice.controller;
+
+public class RoomController {
+
+}

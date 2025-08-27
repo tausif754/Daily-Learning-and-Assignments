@@ -1,0 +1,5 @@
+package com.wipro.tausif.user.service;
+
+public class UserService {
+
+}

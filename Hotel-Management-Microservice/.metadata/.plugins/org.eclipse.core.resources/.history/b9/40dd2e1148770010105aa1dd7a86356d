@@ -1,0 +1,5 @@
+package com.wipro.tausif.user.entity;
+
+public class User {
+
+}

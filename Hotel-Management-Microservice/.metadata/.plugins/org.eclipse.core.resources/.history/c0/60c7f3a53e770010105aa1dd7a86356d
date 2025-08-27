@@ -1,0 +1,17 @@
+package com.wipro.tausif.discovery;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
+
+@Enable
+@SpringBootApplication
+public class DiscoveryServicesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DiscoveryServicesApplication.class, args);
+	}
+
+}

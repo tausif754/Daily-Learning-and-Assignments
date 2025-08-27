@@ -1,0 +1,5 @@
+package com.wipro.tausif.bookingservice.entity;
+
+public class Booking {
+
+}

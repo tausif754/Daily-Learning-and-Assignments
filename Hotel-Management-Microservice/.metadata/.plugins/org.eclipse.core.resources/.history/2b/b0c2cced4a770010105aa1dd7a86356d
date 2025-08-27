@@ -1,0 +1,5 @@
+package com.wipro.tausif.user.controller;
+
+public class UserController {
+
+}

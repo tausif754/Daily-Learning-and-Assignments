@@ -1,0 +1,5 @@
+package com.wipro.tausif.roomservice.repository;
+
+public interface RoomRepository {
+
+}
