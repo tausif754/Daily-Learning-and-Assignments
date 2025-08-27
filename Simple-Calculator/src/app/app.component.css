@@ -1,0 +1,16 @@
+.container {
+  max-width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}

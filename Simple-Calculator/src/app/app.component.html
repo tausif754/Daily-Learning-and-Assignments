@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Simple Calculator</h2>
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="num1"
+      placeholder="First number"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="num2"
+      placeholder="Second number"
+    />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary" (click)="add()">+</button>
+    <button mat-raised-button color="accent" (click)="subtract()">−</button>
+    <button mat-raised-button color="warn" (click)="multiply()">×</button>
+    <button mat-raised-button color="primary" (click)="divide()">÷</button>
+  </div>
+
+  <h3>Result: {{ result }}</h3>
+</div>
