@@ -1,0 +1,27 @@
+package com.wipro.tausif.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+import java.time.LocalDateTime;
+
+@Entity @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class Task {
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  @NotBlank
+  private String taskDesc;
+
+  @Enumerated(EnumType.STRING)
+  private Priority priority = Priority.LOW;
+
+  private LocalDateTime createdAt;
+
+  private boolean markThisTask = false;
+
+  @PrePersist
+  void prePersist() {
+    if (createdAt == null) createdAt = LocalDateTime.now();
+  }
+}
