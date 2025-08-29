@@ -1,0 +1,5 @@
+package com.wipro.tausif.entity;
+
+public class Feedback {
+
+}
